@@ -12,7 +12,7 @@ before_install:
 
 script:
  - ./testdata/test.sh
- - cd web; npm ci
+ - cd web; npm run ci
 
 install:
  - go get github.com/gorilla/websocket
