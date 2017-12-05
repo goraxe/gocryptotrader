@@ -6,9 +6,13 @@ go:
 
 before_install:
  - go get -t -v ./...
+ - nvm install stable
+ - nvm use stable
+ - cd web; npm install
 
 script:
  - ./testdata/test.sh
+ - cd web; npm ci
 
 install:
  - go get github.com/gorilla/websocket
